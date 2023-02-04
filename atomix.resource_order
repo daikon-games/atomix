@@ -1,0 +1,8 @@
+{
+  "FolderOrderSettings": [
+    {"name":"Atomix","order":1,"path":"folders/Atomix.yy",},
+  ],
+  "ResourceOrderSettings": [
+    {"name":"obj_molecule","order":1,"path":"objects/obj_molecule/obj_molecule.yy",},
+  ],
+}

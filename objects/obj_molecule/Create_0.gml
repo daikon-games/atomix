@@ -37,11 +37,12 @@ function get_atom(_atom_name) {
 
 /// @function atom_foreach(_function)
 /// @param _function A function which takes an Atom as an argument
+/// @param _args An array of arguments to pass to _function
 /// Iterates through all the Atoms on this Molecule and performs _function on them
-function atom_foreach(_function) {
+function atom_foreach(_function, _args = []) {
 	var _keys = variable_struct_get_names(atoms);
 	for (var i = 0; i < array_length(_keys); i++) {
 		var _atom = variable_struct_get(atoms, _keys[i]);
-		_function(_atom);
+		_function(_atom, _args);
 	}
 }
