@@ -1,6 +1,6 @@
 {
   "resourceType": "GMProject",
-  "resourceVersion": "1.6",
+  "resourceVersion": "1.7",
   "name": "atomix",
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
@@ -11,18 +11,20 @@
   },
   "defaultScriptType": 1,
   "Folders": [
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Atomix","folderPath":"folders/Atomix.yy","order":1,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Atomix","folderPath":"folders/Atomix.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
+  "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.1.0.58",
+    "IDEVersion": "2023.8.0.98",
   },
   "resources": [
-    {"id":{"name":"obj_molecule","path":"objects/obj_molecule/obj_molecule.yy",},"order":1,},
-    {"id":{"name":"scr_Atom","path":"scripts/scr_Atom/scr_Atom.yy",},"order":0,},
+    {"id":{"name":"obj_molecule","path":"objects/obj_molecule/obj_molecule.yy",},},
+    {"id":{"name":"scr_Atom","path":"scripts/scr_Atom/scr_Atom.yy",},},
   ],
   "RoomOrderNodes": [],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],
