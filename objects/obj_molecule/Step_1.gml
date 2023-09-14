@@ -1,0 +1,5 @@
+atom_foreach(function (_atom) {
+	if (_atom.enabled) {
+		_atom.on_begin_step();
+	}
+});

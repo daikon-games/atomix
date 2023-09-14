@@ -10,9 +10,19 @@ function Atom() constructor {
 		// executed after the Atom is registered
 	}
 	
+    function on_begin_step() {
+        // to be overridden by children
+		// executed on Molecule's Begin Step event
+    }
+	
     function on_step() {
         // to be overridden by children
 		// executed on Molecule's Step event
+    }
+	
+    function on_end_step() {
+        // to be overridden by children
+		// executed on Molecule's End Step event
     }
 	
 	function on_draw_begin() {
