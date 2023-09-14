@@ -51,3 +51,45 @@ This function is executed on the parent Molecule's `Draw` event.
 
 ### on_draw_end()
 This function is executed on the parent Molecule's `Draw End` event.
+
+## Example
+
+Let's say we want to enable any object in our game to have pixel-perfect smooth movement. This task usually involves managing a fractional movement speed, adding and subtracting it, etc. It can be a lot of lines of code and muddy up your actual game logic.
+
+We can instead create an Atom like the following (this could go in any script file):
+
+```
+function Transform() : Atom() constructor {
+    xspeed = 0;
+    yspeed = 0;
+    xAdjustment = 0;
+    yAdjustment = 0;
+
+    function trunc(number) {
+        if (number < 0) {
+            return ceil(number);
+        } else {
+            return floor(number);
+        }
+    }
+
+    function on_step() {
+        var _totalXspeed = xspeed + xAdjustment;
+        var _totalYspeed = yspeed + yAdjustment;
+        var _truncXspeed = trunc(_totalXspeed );
+        var _truncYspeed = trunc(_totalYspeed );
+        xAdjustment = _totalXspeed- _truncXspeed ;
+        yAdjustment = _totalYspeed - _truncYspeed ;
+        instance.x += _truncXspeed ;
+        instance.y += _truncYspeed ;
+    }
+}
+```
+
+This handles all the logic of pixel-perfect smooth movement, but it needs to be actually running on our objects to be useful. That's where registering it with a Molecule comes in. Any object in your game which inherits `obj_molecule` can now utilize this. In the object's `Create` event, call:
+
+```
+transform = add_atom(new Transform());
+```
+
+Then any time you would have updated that object's `hspeed` or `vspeed` variable, instead update `transform.xspeed` and `transform.yspeed`. It will "just work", and you can apply this same Atom to any objects you want, whether they are related to each other or not!
