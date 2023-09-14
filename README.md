@@ -11,8 +11,11 @@ Molecules have the following built-in functions:
 
 ### add_atom(_atom, _atom_name = "")
 Adds an Atom to this Molecule, registering it and starting its events running.
-The `_atom` parameter is an instantiated Atom (created using `new`).
-The `_atom_name` parameter is optional, if not provided it will default to the Atom's constructor name.
+
+- The `_atom` parameter is an instantiated Atom (created using `new`).
+- The `_atom_name` parameter is optional, if not provided it will default to the Atom's constructor name.
+
+`add_atom` returns the `_atom` that was passed in, for easy reference assignment
 
 ### get_atom(_atom_name)
 Finds a registered Atom of this Molecule with a given name.
@@ -20,8 +23,9 @@ The `_atom_name` parameter is the name of the Atom to find.
 
 ### atoms_foreach(_function, _args = [])
 Iterates through all registered Atoms on this Molecule and performs `_function` on them.
-The parameter `_function` is a function which takes an Atom instance and an array as its arguments.
-The parameter `_args` is an array of arguments to optionally pass to `_function`.
+
+- The parameter `_function` is a function which takes an Atom instance and an array as its arguments.
+- The parameter `_args` is an array of arguments to optionally pass to `_function`.
 
 ## Atoms
 Atoms are the actual reusable code components. You can create Atoms by inheriting from the `Atom` constructor.
