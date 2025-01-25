@@ -97,3 +97,8 @@ transform = add_atom(new Transform());
 ```
 
 Then any time you would have updated that object's `hspeed` or `vspeed` variable, instead update `transform.xspeed` and `transform.yspeed`. It will "just work", and you can apply this same Atom to any objects you want, whether they are related to each other or not!
+
+## Licensing
+
+Polyglot is licensed under Creative Commons BY 4.0. Essentially, you may use it, change it, ship it, and share it, with attribution.
+Just make sure to somewhere mention the use of **Atomix by Daikon Games**!
